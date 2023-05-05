@@ -1,0 +1,148 @@
+@import "reset.less";
+@import "mapas.less";
+
+.textDecor {
+    text-decoration: none;
+}
+
+.listStyle {
+    list-style: none;
+}
+
+body {
+    background-color: #colors[backgroundColor];
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    
+    @media @breakpointMobile {
+        .branding img {
+            padding-left: 16px;
+        }
+    
+        .menu li {
+            padding-right: 16px;
+        }
+
+        .products {
+            display: block;
+        }
+        .product-item  {
+            margin-bottom: 32px;
+        }
+
+        .product-button {
+            margin-bottom: 16px;
+        }
+    }
+    
+    @media @breakpointTablet {
+        .container {
+        max-width: 80%;
+    }
+
+    .branding img {
+        padding-left: 16px;
+    }
+
+    .menu li {
+        padding-right: 16px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+        }
+    }
+}
+
+
+header {
+    background-color: #colors[headerColor];
+    position: sticky;
+    top: 0;
+    left: 0;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+}
+
+.menu {
+    display: flex;
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+        .listStyle();
+    }
+    
+    li a {
+        color: #colors[textColor];
+        .textDecor();
+    }
+}
+
+
+section {
+    padding: 56px 0;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+    
+    &-item {
+        .listStyle();
+    }
+
+    &-item img {
+        width: 100%;
+        border-radius: 16px;
+    }
+    .product-button {
+        display: block;
+        background-color: #colors[buttonColor];
+        color: #colors[textColor];
+        text-align: center;
+        padding: 8px 0;
+        border-radius: 8px;
+        margin-top: 8px;
+        .textDecor();
+        
+        &:hover {
+            background-color: #colors[hoverColor];
+        }
+    }
+    
+}
+
+.social-links {
+    background-color: #colors[headerColor];
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    padding: 16px;
+
+    li {
+        .listStyle();
+
+        img {
+            transition: all ease .3s;
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+
+
