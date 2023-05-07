@@ -1,5 +1,5 @@
 @import "reset.less";
-@import "mapas.less";
+@import "variaveis.less";
 
 .textDecor {
     text-decoration: none;
@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #colors[backgroundColor];
+    background-color: @backgroundColor;
 }
 
 .container {
@@ -61,7 +61,7 @@ body {
 
 
 header {
-    background-color: #colors[headerColor];
+    background-color: @headerColor;
     position: sticky;
     top: 0;
     left: 0;
@@ -82,7 +82,7 @@ header {
     }
     
     li a {
-        color: #colors[textColor];
+        color: @textColor;
         .textDecor();
     }
 }
@@ -110,8 +110,8 @@ section {
     }
     .product-button {
         display: block;
-        background-color: #colors[buttonColor];
-        color: #colors[textColor];
+        background-color: @buttonColor;
+        color: @textColor;
         text-align: center;
         padding: 8px 0;
         border-radius: 8px;
@@ -119,14 +119,14 @@ section {
         .textDecor();
         
         &:hover {
-            background-color: #colors[hoverColor];
+            background-color: @hoverColor;
         }
     }
     
 }
 
 .social-links {
-    background-color: #colors[headerColor];
+    background-color: @headerColor;
     display: flex;
     justify-content: space-around;
     max-width: 100%;
